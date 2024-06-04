@@ -1,0 +1,16 @@
+<?php
+
+namespace App\Http\Controllers\director\complaint;
+
+use App\Models\Complaint;
+use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+
+class DirectorComplaintController extends Controller
+{
+    public function complaint()
+    {
+        $complaint = Complaint::get();
+        return view('director.complaint.view', ['complaints' => $complaint]);
+    }
+}
